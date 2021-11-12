@@ -4,7 +4,7 @@ const app = Vue.createApp({
             product: 'iPhone 12',
             image: './assets/images/iphone-12-red.png',
             description:'New Apple A14 Bionic hight perfomance',
-            inStock: true,
+            inStock: false,
             inventory: 8,
             details: ['64GB','128GB','256GB'], // collection
             variants: [
