@@ -11,7 +11,16 @@ const app = Vue.createApp({
                 {id: 239, color: 'Red', image: './assets/images/iphone-12-red.png'},
                 {id: 240, color: 'Purple', image: './assets/images/iphone-12-purple.png'},
                 {id: 250, color: 'White', image: './assets/images/iphone-12-white.png'},
-            ]
+            ],
+            cart:0
+        }
+    },
+    methods: {
+        addToCart(){
+            this.cart += 1
+        },
+        updateImage(variantImage){
+            this.image = variantImage
         }
     }
 })
