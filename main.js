@@ -2,6 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             product: 'iPhone 12',
+            brand: 'Apple',
             image: './assets/images/iphone-12-red.png',
             description:'New Apple A14 Bionic hight perfomance',
             inStock: false,
@@ -21,6 +22,11 @@ const app = Vue.createApp({
         },
         updateImage(variantImage){
             this.image = variantImage
+        }
+    },
+    computed: {
+        title(){
+            return this.brand + ' ' + this.product
         }
     }
 })
