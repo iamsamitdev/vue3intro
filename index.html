@@ -20,11 +20,16 @@
                 <div class="product-info">
                     <h1>{{ product }}</h1>
                     <!-- v-if directive -->
-                    <p v-if="inventory > 10">In Stock</p>
-                    <p v-else-if="inventory <=10 && inventory > 0">Almost sold out!</p>
+                    <p v-if="inStock">In Stock</p>
                     <p v-else>Out of Stock</p>
-                    <!-- v-show directive -->
-                    <!-- <p v-show="inStock">In Stock</p> -->
+
+                    <!-- List Rendering -->
+                    <ul>
+                        <!-- v-for directive -->
+                        <li v-for="detail in details">{{ detail }}</li> <!-- detail (alias) details (collection) -->
+                        <!-- Setting the key attribute -->
+                        <div v-for="variant in variants" :key="variant.id"> {{ variant.color }}</div>
+                    </ul>
                 </div>
             </div>
         </div>
