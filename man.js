@@ -1,1 +1,7 @@
-const product = 'iPhone'
+const app = Vue.createApp({
+    data() {
+        return {
+            product: 'iPhone',
+        }
+    }
+})
